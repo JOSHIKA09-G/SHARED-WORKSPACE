@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Workspace Management</title>
+    <link rel="stylesheet" href="sharedstyle.css">
+   
+    <script>
+        function showPage(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body onload="showPage('home')">
+    <header>
+        <h1>Shared Workspace Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+            <li><a onclick="showPage('dashboard')">Dashboard</a></li>
+            <li><a onclick="showPage('bookings')">Bookings</a></li>
+            <li><a onclick="showPage('users')">Users</a></li>
+            <li><a onclick="showPage('notifications')">Notifications</a></li>
+            <li><a onclick="showPage('login')">Login</a></li>
+            <li><a onclick="showPage('register')">Register</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="active">
+            <h2>Welcome to Shared Workspace Management</h2>
+            <p>Manage and book your workspace efficiently.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We provide a platform to manage shared workspaces effectively.</p>
+        </section>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Overview of workspace usage.</p>
+        </section>
+        <section id="bookings">
+            <h2>Bookings</h2>
+            <form>
+                <label for="workspace">Select Workspace:</label>
+                <select id="workspace">
+                    <option value="1">Workspace 1</option>
+                    <option value="2">Workspace 2</option>
+                </select>
+                <label for="date">Select Date:</label>
+                <input type="date" id="date">
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        <section id="users">
+            <h2>Users</h2>
+            <p>Manage workspace members.</p>
+        </section>
+        <section id="notifications">
+            <h2>Notifications</h2>
+            <p>Recent workspace updates.</p>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="register">
+            <h2>Register</h2>
+            <form>
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Shared Workspace Management</p>
+    </footer>
+</body>
+</html>
